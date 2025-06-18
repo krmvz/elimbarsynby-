@@ -18,7 +18,7 @@ const Header: React.FC = () => {
       </div>
       
       <div className="hero">
-        <h1>Күнүңдү кайрымдуулук менен башта!</h1>
+        <h1>git push --set-upstream origin main</h1>
         <p>Сиздин жардамыңыз менен дүйнөнү жакшы жакка өзгөртө алабыз.</p>
       </div>
     </header>

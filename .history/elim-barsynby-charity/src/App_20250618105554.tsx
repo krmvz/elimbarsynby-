@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './components/sections/Home';
-import About from './components/sections/About';
-import Contact from './components/sections/Contact';
 import './App.css';
 import './components/styles.css';
-import './components/sections/sections.css';
 
 interface Donation {
   _id: string;
@@ -106,50 +102,49 @@ function App() {
 
             <div className="donation-form">
               <h2>Кайрымдуулук кылуу</h2>
-              <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    name="donor"
-                    value={formData.donor}
-                    onChange={handleChange}
-                    placeholder="Сиздин атыңыз"
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Электрондук почтаңыз"
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="number"
-                    name="amount"
-                    value={formData.amount}
-                    onChange={handleChange}
-                    placeholder="Кайрымдуулук суммасы ($)"
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Кааласаңыз билдирүү калтырыңыз"
-                  />
-                </div>
-                <button type="submit" className="donate-button">Кайрымдуулук кылуу</button>
-              </form>
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <input
+                type="text"
+                name="donor"
+                value={formData.donor}
+                onChange={handleChange}
+                placeholder="Сиздин атыңыз"
+                required
+              />
             </div>
+            <div className="form-group">
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Электрондук почтаңыз"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="number"
+                name="amount"
+                value={formData.amount}
+                onChange={handleChange}
+                placeholder="Кайрымдуулук суммасы ($)"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Кааласаңыз билдирүү калтырыңыз"
+              />
+            </div>
+            <button type="submit" className="donate-button">Кайрымдуулук кылуу</button>
+          </form>
 
-            <div className="recent-donations">
+          <div className="recent-donations">
               <h2>Акыркы кайрымдуулуктар</h2>
               <div className="donations-list">
                 {donations && donations.length > 0 ? (
